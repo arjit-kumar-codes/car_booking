@@ -8,12 +8,12 @@ export default function CarsGrid() {
   const contactMenuOpen = Boolean(anchorEl);
 
   return (
-    <section id="cars" className="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/40">
-      <Container maxWidth="lg">
+    <section id="cars" className="py-16 md:py-24 bg-gray-900">
+      <Container maxWidth="lg" className="">
         <div className="flex items-end justify-between mb-8">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold">Available Cars</h2>
-            <p className="opacity-70">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Available Cars</h2>
+            <p className="opacity-70 text-white">
               Choose from our popular options and contact the owner directly.
             </p>
           </div>
@@ -38,8 +38,7 @@ export default function CarsGrid() {
 
             return (
               <Grid size={{xs:12,sm:6,md:6}} key={car.id}>
-                <Card className="rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all !bg-[#1e1e1e] ">
-                  {/* ✅ Image full width & responsive */}
+                <Card className="rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all ">
                   <div className="relative w-full h-56 sm:h-64 md:h-72 lg:h-80 overflow-hidden">
                     <img
                       src={car.imgUrl}
@@ -48,7 +47,7 @@ export default function CarsGrid() {
                     />
                   </div>
 
-                  <CardContent className="!bg-[#1e1e1e]">
+                  <CardContent className="bg-gray-800">
                     <div className="flex items-start justify-between gap-2">
                       <Typography variant="h6" className="font-bold text-white">
                         {car.name}
@@ -62,7 +61,7 @@ export default function CarsGrid() {
                     </div>
                   </CardContent>
 
-                  <CardActions className="px-4 pb-4 flex items-center justify-between !bg-[#1e1e1e]">
+                  <CardActions className="px-4 pb-4 flex items-center justify-between bg-gray-800">
                     <Stack direction="row" spacing={1}>
                       <Tooltip title="Email">
                         <IconButton component="a" href={contactLinks.email}>

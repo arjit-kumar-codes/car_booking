@@ -2,7 +2,7 @@ import { Container } from "@mui/material";
 
 export default function Footer() {
   return (
-    <footer className="py-10 border-t dark:border-white/10">
+    <footer className="py-10 border-t border-white/10">
       <Container maxWidth="lg" className="flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="opacity-70">© {new Date().getFullYear()} DriveNow. All rights reserved.</p>
         <div className="flex gap-4">
